@@ -1,0 +1,57 @@
+{
+    "name": "andreo/eventsauce-bundle",
+    "description": "Symfony bundle for EventSauce.",
+    "keywords": [
+        "eventsauce",
+        "event sourcing",
+        "symfony",
+        "bundle"
+    ],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrzej Pakula",
+            "email": "andrze.pakula@gmail.com"
+        }
+    ],
+    "suggest": {
+        "andreo/eventsauce-snapshotting": "Extended snapshot components.",
+        "andreo/eventsauce-migration-generator": "Generates doctrine migrations per aggregate.",
+        "andreo/eventsauce-messenger": "Integration symfony messenger.",
+        "andreo/eventsauce-outbox": "Extended message outbox components."
+    },
+    "require": {
+        "php": ">=8.2",
+        "eventsauce/eventsauce": "^3.0",
+        "eventsauce/message-repository-for-doctrine": "^0.4.1",
+        "symfony/http-kernel": "^6.2",
+        "symfony/config": "^6.2",
+        "symfony/dependency-injection": "^6.2"
+    },
+    "require-dev": {
+        "andreo/eventsauce-messenger": "dev-main",
+        "andreo/eventsauce-migration-generator": "dev-main",
+        "andreo/eventsauce-outbox": "dev-main",
+        "andreo/eventsauce-snapshotting": "dev-main as 3.2",
+        "doctrine/doctrine-migrations-bundle": "^3.0",
+        "friendsofphp/php-cs-fixer": "dev-master",
+        "matthiasnoback/symfony-dependency-injection-test": "^4.3",
+        "phpstan/phpstan": "^1.9",
+        "phpunit/phpunit": "^9.4",
+        "roave/security-advisories": "dev-latest",
+        "symfony/monolog-bundle": "3.x-dev"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Andreo\\EventSauceBundle\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "minimum-stability": "dev"
+}
